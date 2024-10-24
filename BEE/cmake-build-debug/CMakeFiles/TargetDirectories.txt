@@ -1,3 +1,0 @@
-C:/Users/thali/PROGRAMACAO/C/BEE/cmake-build-debug/CMakeFiles/BEE.dir
-C:/Users/thali/PROGRAMACAO/C/BEE/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/thali/PROGRAMACAO/C/BEE/cmake-build-debug/CMakeFiles/rebuild_cache.dir
