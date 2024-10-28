@@ -1,13 +1,15 @@
+#include <stdio.h>
 #include <iostream>
+using namespace std;
 
 int main() {
-    int i = {1};
-    int j = {60};
-
-    for(int k = 0;k <= 12;k++) {
-        std:: cout << "I=" << i << " J=" << j << std::endl;
-        i = i + 3;
-        j = j - 5;
+    int i = 1, j = 60;
+    while (true){
+        printf("I=%d J=%d\n",i,j);
+        if(j == 0){
+            break;
+        }
+        i+=3;
+        j-=5;
     }
-    return 0;
 }
