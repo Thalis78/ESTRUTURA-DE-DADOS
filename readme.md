@@ -1,6 +1,7 @@
 ## C++(CONHECENDO A LINGUAGEM):
 
 ## OBSERVAÇÕES SOBRE C++:
+
 - SÃO CASE SENSITIVE
 - TERMINADORES DE INSTRUÇÃO(;)
 - BLOCOS DE CÓDIGO SÃO DELIMITADOS POR CHAVES '{}'
@@ -9,20 +10,72 @@
 - PRECISA DE UMA FUNÇÃO PRINCIPAL CHAMADA "main()" PARA QUE O PROGRAMA SEJA EXECUTADO.
 
 ## 1. COMANDOS DE ENTRADAS E SAIDA:
-OBS: A BIBLIOTECA PADRÃO DE COMANDOS DE ENTRADAS E SAIDA DO C++ É A BIBLIOTECA "iostream". SUA UTILIZAÇÃO É BASEADA NO COMANDO "std", QUE É UM NAMESPACE 
+
+OBS: A BIBLIOTECA PADRÃO DE COMANDOS DE ENTRADAS E SAIDA DO C++ É A BIBLIOTECA "iostream". SUA UTILIZAÇÃO É BASEADA NO COMANDO "std", QUE É UM NAMESPACE
 QUE PERMITE A DEFINIÇÃO DE ESTRUTURAS, CLASSES, FUNÇÕES, CONSTANTES, ETC, QUE ESTÃO LIGADAS A ELE.
 
 ## 1.1 USANDO O STD PARA COMANDO DE ENTRADA:
+
 - "std::cin" - ELE É USADO PARA ENTRADAS DE DADOS PADRÃO
 - "std:getline" - LER STRING COM ESPAÇOS
 
 OBS: O COMANDO "std::cin" NÃO LER STRINGS QUE CONTÊM ESPAÇOS. PARA ESSA SITUAÇÃO DEVE-SE USAR "std:getline"
 
-## 1.2 USANDO O  STD PARA COMANDO DE SAIDA:
+## 1.2 USANDO O STD PARA COMANDO DE SAIDA:
+
 - "std::count" - É USADO PARA IMPRIMIR DADOS NA SAÍDA PADRÃO.
-- "std::endl"  - É USADO PARA GARANTIR QUE A LINHA VÁ PARA BAIXO QUANDO ELE IMPRIMIR
+- "std::endl" - É USADO PARA GARANTIR QUE A LINHA VÁ PARA BAIXO QUANDO ELE IMPRIMIR
+
+## 1.3 BIBLIOTECA(C/C++):
+
+- stdio.h(Standard Input/Output) - Fornece funções para entrada e saida de dados.
+  Funções principais:
+
+printf(): Exibe dados na tela.
+scanf(): Lê dados da entrada.
+getchar(): Lê um único caractere.
+putchar(): Exibe um único caractere.
+fgets(): Lê uma linha de texto.
+fputs(): Exibe uma linha de texto.
+
+- stdlib.h (Standard Library) - oferece várias funções úteis para controle de memória, conversões e geração de números aleatórios.[]
+  Funções principais:
+
+malloc(), calloc(), realloc(), free(): Funções para alocar e liberar memória dinâmica.
+atoi(), atof(), atol(): Convertem strings para inteiros, floats e longos, respectivamente.
+rand(), srand(): Funções para gerar números aleatórios.
+exit(): Encerra o programa imediatamente.
+
+- string.h (String Operations) - fornece para manipulação de strings
+  Funções principais:
+
+strlen(): Retorna o comprimento de uma string.
+strcpy(): Copia uma string para outra.
+strcmp(): Compara duas strings.
+strcat(): Concatena duas strings.
+strchr(): Encontra um caractere em uma string.
+strtok(): Divide uma string em tokens.
+
+- math.h (Mathematical Functions) - fornece funções para operações matemáticas
+  Funções principais:
+
+sqrt(): Calcula a raiz quadrada.
+pow(): Calcula a potência de um número.
+sin(), cos(), tan(): Funções trigonométricas.
+log(), log10(): Funções para logaritmos.
+abs(): Retorna o valor absoluto de um número.
+
+- time.h (Time and Date Functions) - oferece funções para manipulação de datas e horas
+  Funções principais:
+
+time(): Retorna o tempo atual em segundos desde 1 de janeiro de 1970 (epoch).
+clock(): Retorna o tempo de CPU consumido pelo programa.
+difftime(): Calcula a diferença de tempo entre dois valores.
+localtime(): Converte o tempo para o formato local.
+strftime(): Formata a data e hora de acordo com o padrão especificado.
 
 ## 2. OPERADOR DE INSERÇÃO E EXTRAÇÃO
+
 SÃO OPERADORES USADO EM C/C++ QUE PERMITEM A ENTRADA E SAIDA DE DADOS.
 
 OPERADOR DE INSERÇÃO (<<) : PERMITE IMPRIMIR DADOS NA TELA
@@ -30,12 +83,12 @@ OPERADOR DE EXTRAÇÃO (>>) : PERMITE OBTER UMA ENTRADA
 
 ## 3. CRIANDO VÁRIAVEIS:
 
-tipo      |   sintaxe    |  variavel                  
-----------|--------------|----------------
-INTEIROS  |    int       | int idade                         
-FLUTUANTES| float/double | float altura / double altura
-CARACTERE |    char      | char inicialNome
-BOOLEANO  |    bool      | bool estaVivo
+| tipo       | sintaxe      | variavel                     |
+| ---------- | ------------ | ---------------------------- |
+| INTEIROS   | int          | int idade                    |
+| FLUTUANTES | float/double | float altura / double altura |
+| CARACTERE  | char         | char inicialNome             |
+| BOOLEANO   | bool         | bool estaVivo                |
 
 ## 4. USO DE CONDICIONAIS:
 
@@ -55,11 +108,13 @@ BOOLEANO  |    bool      | bool estaVivo
 - WHILE - USADO PARA INTERAÇÕES INDEFINIDAS ENQUANTO A CONDIÇÃO FOR VERDADEIRA.
 
 ## 6. ARRAY:
+
 PARA CRIAR UM ARRAY É NECESSARIO DEFINIR O SEU TAMANHO, CASO NÃO SEJA DEFINIDO , SE ELE FOR INICIALIZADO O COMPILADOR VAI DETERMINAR O TAMANHO AUTOMATICAMENTE.
 
 SINTAXE:
+
 - int numeros[5] = {1,2,3,4,5}
-- int numeros[]  = {1,2,3,4,5}  - ISSO FUNCIONARÁ
+- int numeros[] = {1,2,3,4,5} - ISSO FUNCIONARÁ
 
 ## OU
 
@@ -69,8 +124,10 @@ SINTAXE:
 # POUCO DE ESTRUTURA DE DADOS;
 
 # TIPO ABSTRATO DE DADO - TAD:
+
 INCLUEM AS OPERAÇÕES PARA A MANIPULAÇÃO DOS DADOS
 EX:
+
 - CRIAÇÃO DA ESTRUTURA.
 - INCLUSÃO DE UM ELEMENTO.
 - REMOÇÃO DE UM ELEMENTO.
@@ -85,14 +142,16 @@ EX:
 - fputc ()
 - fgetc()
 - feof()
-...
-## ESTRUTURAS DE DADOS: 
+  ...
+
+## ESTRUTURAS DE DADOS:
 
 TRATA-SE DE UM RELACIONAMENTO LÓGICO ENTRE TIPOS DE DADOS
 
 ## LISTAS :
 
-MEIO DE MANIPULAÇÃO DAS LITAS 
+MEIO DE MANIPULAÇÃO DAS LITAS
+
 - CRIAÇÃO DA LISTA.
 - INSERIR ELEMENTOS.
 - EXCLUSÃO DE ELEMENTOS
@@ -100,9 +159,11 @@ MEIO DE MANIPULAÇÃO DAS LITAS
 - DESTRUIÇÃO DA LISTA
 
 ## LISTA ESTÁTICA:
+
 LISTA ESTÁTICA É UM TIPO DE LISTA QUE UTILIZA UM VETOR DE TAMANHO FIXO. O NUMERO DE ELEMENTOS É DETERMINADO NO MOMENTO DA CRIAÇÃO DA LISTA E NÃO PODE SER ALTERADO DURANTE A EXECUÇÃO DO PROGRAMA. OU SEJA, ELE VAI CONTER UM LIMITE MAXIMO, UMA VEZ QUE ESSE LIMITE É ATINGIDO, A LISTA NÃO PODE CRESCER MAIS.
 
 CARACTERISTICAS:
+
 - ALOCAÇÃO DE MEMÓRIA: A MEMÓRIA É ALOCADA DE MANEIRA IMEDIATA E O ACESSO AOS ELEMENTOS É FEITO POR ÍNDICES.
 - FACIL ACESSO AO ELEMENTO: BUSCA DIRETO NA MEMÓRIA;
 - LIMITAÇÃO: VETOR NÃO PODE SER ALTERADO DURANTE A EXECUÇÃO;
@@ -112,28 +173,30 @@ CARACTERISTICAS:
 MANIPULAÇÃO DA LISTA ESTÁTICA:
 
 1. CRIAÇÃO DA LISTA ESTÁTICA:
-SUA CRIAÇÃO É BASEADA EM UM TAMANHO FIXO;
+   SUA CRIAÇÃO É BASEADA EM UM TAMANHO FIXO;
 
 2. ISERÇÃO DE ELEMENTOS:
-COLOCAMOS ELEMENTOS ESPECIFICANDO SUA POSIÇÃO;
+   COLOCAMOS ELEMENTOS ESPECIFICANDO SUA POSIÇÃO;
 
-- EX: LISTA[0] = 100; 
+- EX: LISTA[0] = 100;
 
 3. REMOÇÃO DE ELEMENTOS:
-DESLOCAMENTOS OS ELEMENTOS PARA DIREITA PARA PREENCHER A POSIÇÃO DO ELEMENTO QUE FOI REMOVIDO.
+   DESLOCAMENTOS OS ELEMENTOS PARA DIREITA PARA PREENCHER A POSIÇÃO DO ELEMENTO QUE FOI REMOVIDO.
 
 - OBS: O TAMANHO VAI CONTINUAR O MESMO.
 
 4. ACESSAR ELEMENTO:
-ACESSO DIRETAMENTE PELO INDICE;
+   ACESSO DIRETAMENTE PELO INDICE;
 
 5. DESTRUIÇÃO DA LISTA ESTÁTICA:
-NÃO É NECESSARIO DESTRUIR O VETOR POIS O MESMO É ALOCADO NA PILHA QUE SERÁ DESTRUIDO AUTOMATICAMENTE AO SAIR DO ESCOPO.
+   NÃO É NECESSARIO DESTRUIR O VETOR POIS O MESMO É ALOCADO NA PILHA QUE SERÁ DESTRUIDO AUTOMATICAMENTE AO SAIR DO ESCOPO.
 
 ## LISTA DINÂMICA:
+
 UMA LISTA DINÂMICA É UMA ESTRUTURA DE DADOS ONDE O NÚMERO DE ELEMENTOS PODE MUDAR AO LONGO DA EXECUÇÃO DO PROGRAMA. ELA É DINAMICAMENTE ALOCADA DURANTE A EXECUÇÃO, OU SEJA, A MEMÓRIA É ALOCADA CONFORME NECESSÁRIO PARA ARMAZENAR OS DADOS, PODENDO CRESCER OU DIMINUIR CONFORME AS ADIÇÕES OU REMOÇÃO DOS ELEMENTOS.
 
 CARACTERISTICAS:
+
 - TAMAMHO VARIAVEL:OU SEJA, O NUMERO DE ELEMENTOS PODE CRESCER OU DIMINUIR CONFORME NECESSÁRIO.
 - ALOCAÇÃO DE MEMORIA: UTILIZAÇÃO DE PONTEIRO PARA APONTAR O NÓ(PROXIMO NÓ) NA LISTA.
 - ACESSO ENCADEADO: ACESSO AOS ELEMENTO É FEITO SEQUENCIALMENTE,OU SEJA,É NECESSÁRIO PECORRER A LISTA, COMEÇAMDP DO PRIMEIRO NÓ, ATÉ ENCONTRAR O ELEMENTO NECESSÁRIO.
@@ -141,29 +204,27 @@ CARACTERISTICAS:
 MANIPULAÇÃO DA LISTA DINÂMICA:
 
 1. CRIAÇÃO DA LISTA:
-A LISTA COMEÇA VAZIA, COM UM PONTEIRO NULO. CADA ELEMENTO É ALOCADO NA MEMÓRIA DINAMICAMENTE
+   A LISTA COMEÇA VAZIA, COM UM PONTEIRO NULO. CADA ELEMENTO É ALOCADO NA MEMÓRIA DINAMICAMENTE
 
 2. INSERÇÃO DE ELEMENTOS:
-INSERIR UM NOVO ELEMENTO CRIANDO UM NOVO NÓ E APONTANDO PARA O PRÓXIMO NÓ.
-INSERÇÃO PODE SER FEITA NO INÍCIO, FIM OU NO MEIO DA LISTA.
+   INSERIR UM NOVO ELEMENTO CRIANDO UM NOVO NÓ E APONTANDO PARA O PRÓXIMO NÓ.
+   INSERÇÃO PODE SER FEITA NO INÍCIO, FIM OU NO MEIO DA LISTA.
 
 3. REMOVER ELEMENTOS:
-PARA REMOVER UM ELEMENTO, ALTERAMOS OS PONTEIROS E LIBERAMOS A MEMÓRIA COM O COMANDO DELETE.
+   PARA REMOVER UM ELEMENTO, ALTERAMOS OS PONTEIROS E LIBERAMOS A MEMÓRIA COM O COMANDO DELETE.
 
 4. ACESSAR ELEMENTOS:
-PARA ACESSAR UM ELEMENTO, PERCORREMOS A LISTA SEQUENCIALMENTE ATÉ ENCONTRÁ-LO.
+   PARA ACESSAR UM ELEMENTO, PERCORREMOS A LISTA SEQUENCIALMENTE ATÉ ENCONTRÁ-LO.
 
 5. DESTRUIÇÃO DA LISTA DINÂMICA:
-PARA DESTRUIR A LISTA, PERCORREMOS TODOS OS NÓS E LIBERAMOS A MEMÓRIA COM DELETE APÓS A DESTRUÍÇÃO, O PONTEIRO DA LISTA É DEFINIDO COMO NULL.
-
-
+   PARA DESTRUIR A LISTA, PERCORREMOS TODOS OS NÓS E LIBERAMOS A MEMÓRIA COM DELETE APÓS A DESTRUÍÇÃO, O PONTEIRO DA LISTA É DEFINIDO COMO NULL.
 
 ## LISTA ESTÁTICA X LISTA DINÂMICA
 
-| OPERAÇÃO              | LISTA ESTÁTICA                  | LISTA DINÂMICA                     |
-|-----------------------|-------------------------------------|----------------------------------------|
-| CRIAÇÃO            | VETOR FIXO                          | PONTEIRO NULO, ALOCAÇÃO DINÂMICA       |
-| INSERÇÃO           | NA POSIÇÃO FIXA, SEM AMPLIAR TAMANHO | INSERE NO INÍCIO, FIM OU MEIO          |
-| REMOÇÃO            | DESLOCA ELEMENTOS PARA A DIREITA    | AJUSTA PONTEIROS E LIBERA MEMÓRIA      |
-| ACESSO            | ACESSO DIRETO POR ÍNDICE           | PERCORRE A LISTA PARA ENCONTRAR O ELEMENTO |
-| DESTRUIÇÃO         | NÃO NECESSÁRIA, DESALOCA AUTOMÁTICA | LIBERA MEMÓRIA COM `DELETE` E DEFINE `NULL` |
+| OPERAÇÃO   | LISTA ESTÁTICA                       | LISTA DINÂMICA                              |
+| ---------- | ------------------------------------ | ------------------------------------------- |
+| CRIAÇÃO    | VETOR FIXO                           | PONTEIRO NULO, ALOCAÇÃO DINÂMICA            |
+| INSERÇÃO   | NA POSIÇÃO FIXA, SEM AMPLIAR TAMANHO | INSERE NO INÍCIO, FIM OU MEIO               |
+| REMOÇÃO    | DESLOCA ELEMENTOS PARA A DIREITA     | AJUSTA PONTEIROS E LIBERA MEMÓRIA           |
+| ACESSO     | ACESSO DIRETO POR ÍNDICE             | PERCORRE A LISTA PARA ENCONTRAR O ELEMENTO  |
+| DESTRUIÇÃO | NÃO NECESSÁRIA, DESALOCA AUTOMÁTICA  | LIBERA MEMÓRIA COM `DELETE` E DEFINE `NULL` |
