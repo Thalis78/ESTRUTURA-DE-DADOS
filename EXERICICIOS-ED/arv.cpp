@@ -16,6 +16,7 @@ bool isNull(Arv* &arv) {
 bool notNull(Arv* &arv) {
     return arv != NULL;
 }
+
 void criarArv(int num, Arv* &arv, Arv* esq = NULL, Arv* dir = NULL) {
     Arv* novo = (Arv*) malloc(sizeof(Arv));
     novo->num = num;
@@ -38,12 +39,28 @@ void emOrdem(Arv* &arv) {
     emOrdem(arv->dir);
 }
 
+int buscarBin(int num, Arv* &arv) {
+    if (arv == NULL) return 0;
+
+    return arv->num == num ? 1 : num < arv->num ? buscarBin(num, arv->esq) : buscarBin(num, arv->dir);
+}
+
 void posOrdem(Arv* &arv) {
     if (isNull(arv)) return;
     posOrdem(arv->esq);
     posOrdem(arv->dir);
     printf("%d ", arv->num);
 }
+
+void inserirABB(int num, Arv* &arv) {
+    if (isNull(arv)) {
+        criarArv(num, arv);
+        return;
+    }
+
+    return arv->num > num ? inserirABB(num, arv->esq) : inserirABB(num, arv->dir);
+}
+
 int totalNo(Arv* arv) {
     return isNull(arv) ? 0 : 1 + totalNo(arv->esq) + totalNo(arv->dir);
 }
@@ -66,30 +83,30 @@ int altura(Arv* arv) {
     return 1 + max(altura(arv->esq), altura(arv->dir));
 }
 
+bool estritamenteBin(Arv* &arv) {
+    return (notNull(arv->esq) && notNull(arv->dir)) || 
+           (isNull(arv->esq) && isNull(arv->dir));
+}
+
 int main() {
-    Arv* esquerda = NULL;
-    Arv* direita = NULL;
-
-    criarArv(2, esquerda);
-    criarArv(3, direita);
-    criarArv(4, esquerda->esq);
-    criarArv(4, esquerda->esq->esq);
-
-    criarArv(5,esquerda->dir);
-    criarArv(6,direita->esq);
-    criarArv(7,direita->dir);
     Arv* raiz = NULL;
-    criarArv(1, raiz, esquerda, direita);
 
-    printf("\nEM ORDEM:\n");
-    emOrdem(raiz);
-    printf("\nPRE ORDEM:\n");
-    preOrdem(raiz);
-    printf("\nPOS ORDEM:\n");
-    posOrdem(raiz);
+    inserirABB(5, raiz);
+    inserirABB(5, raiz);
+    inserirABB(4, raiz);
+    inserirABB(6,raiz);
+    inserirABB(6,raiz);
+    inserirABB(3,raiz);
+    inserirABB(4,raiz);
+    inserirABB(2,raiz);
+    inserirABB(3,raiz);
+    inserirABB(7, raiz);
 
-    printf("\n%d", folhas(raiz));
-    printf("\n%d", totalNo(raiz));
-    printf("\n%d",noInterno(raiz));
-    printf("\n%d", altura(raiz));
+    int resultBin = buscarBin(7, raiz);
+
+    if (resultBin) {
+        printf("NUMERO ENCONTRADO\n");
+    }else {
+        printf("NUMERO NÃO ENCONTRADO\n");
+    }
 }
